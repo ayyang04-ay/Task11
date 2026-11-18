@@ -1,0 +1,4 @@
+sample,ligand_1,ligand_1_conc_um,ligand_2,ligand_2_conc_um,tm_mean_c,delta_tm_c
+UDP,UDP,5000,,,51,2
+ANT-3744,ANT-3744,100,,,55,6
+ANT-3744 + UDP,ANT-3744,100,UDP,5000,57,8

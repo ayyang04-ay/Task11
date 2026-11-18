@@ -1,0 +1,5 @@
+analyte,co_incubated_species,co_incubated_conc_um,kd_um
+UDP,,,32
+UDP,ANT-3744,20,20
+ANT-3744,,,0.4
+ANT-3744,UDP,5000,0.2
