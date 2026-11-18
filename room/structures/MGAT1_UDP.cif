@@ -2229,7 +2229,7 @@ _diffrn_detector.area_resol_mean ?
 _diffrn_detector.dtime ?
 _diffrn_detector.pdbx_frames_total ?
 _diffrn_detector.pdbx_collection_time_total ?
-_diffrn_detector.pdbx_collection_date 2020-01-13
+_diffrn_detector.pdbx_collection_date ?
 _diffrn_detector.pdbx_frequency ?
 _diffrn_detector.id ?
 _diffrn_detector.number_of_axes ?
@@ -2263,13 +2263,13 @@ _diffrn_source.power ?
 _diffrn_source.size ?
 _diffrn_source.source SYNCHROTRON
 _diffrn_source.target ?
-_diffrn_source.type 'SSRF BEAMLINE BL17U'
+_diffrn_source.type ?
 _diffrn_source.voltage ?
 _diffrn_source.take-off_angle ?
 _diffrn_source.pdbx_wavelength_list 0.97918
 _diffrn_source.pdbx_wavelength ?
-_diffrn_source.pdbx_synchrotron_beamline BL17U
-_diffrn_source.pdbx_synchrotron_site SSRF
+_diffrn_source.pdbx_synchrotron_beamline ?
+_diffrn_source.pdbx_synchrotron_site ?
 
 _reflns.B_iso_Wilson_estimate 13.13
 _reflns.entry_id MGAT1_UDP
