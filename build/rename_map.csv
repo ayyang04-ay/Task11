@@ -1,0 +1,13 @@
+original,working_name,role,notes
+Compound 1,ANT-0592,screening hit,purchased from commercial supplier
+TNG-3153,ANT-2118,analog,
+TNG-5988,ANT-1476,analog,
+TNG-9084,ANT-3105,analog,
+TNG-9333,ANT-3744,analog,carries structural and biophysical package; ligand code C3744 in structure files
+TNG-2673,ANT-4267,analog,most potent
+Compound 8,ANT-1938,acquired,obtained for benchmarking
+Compound 9,ANT-2214,acquired,obtained for benchmarking
+Tango Therapeutics,Antera Therapeutics,sponsor,
+GSE345281,,accession,removed entirely
+9ZB0/9ZAZ/9ZB1/9ZB2/9ZB3,,accession,removed entirely
+A1C1W,C3744,ligand code,applied in structure files
