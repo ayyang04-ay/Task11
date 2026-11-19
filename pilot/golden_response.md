@@ -75,9 +75,50 @@ Studies 1 and 4 are the kill gates. Nothing beyond them is worth funding until t
 - **`Group7_STK11_82431`**, 349 total reads against a 2.46M median: a failed library, excluded before any normalisation.
 - **Row P23193**, all eight A375 channels exactly zero. Present identically in the source, and the reason the analysable site count is 909 rather than 910.
 - **Non-secretory proteins in the glycoproteomics** (HNRNPA1L3, SP9, PHOX2B, TUBB) carrying N-glycans with flat ratios: likely misassignments, excluded from class statistics.
-- **Group-to-arm mapping**: the records give group, background and n, but no treatment arm. The mapping is not recoverable from the files and no pillar depends on it, so the backgrounds were aggregated.
+- **Group-to-arm mapping**: the records give group, background and n, but no treatment arm. The mapping is not recoverable from the files, so the backgrounds were aggregated on the label every count column already carries. See the note below.
 - **Stated cohort sizes** of 30 and 15 against 141 observed tumour samples: noted, proceeded on observed counts.
 - **Distinct-UMI estimator**: tested and set aside. It ranks core-essential genes among the top sensitisers at a 24-hour timepoint, which is a tell.
 - **Potency protocol inconsistency**: the records specify a 100 uM top concentration, five of six dose-response panels run to 1000 uM, and ANT-0592's 197 uM potency cannot be determined from a series topping at 100 uM. Reported, not reconciled.
+
+## Expected treatment of the unmapped screen arms
+
+This is the one place a correct answer has to decide what to do with a gap rather than with
+a value, so the expected treatment is stated here explicitly.
+
+**The mapping from Group 1-8 to treatment arm is not in the files and is not recoverable
+from them.** The records name the arms the experiment comprised - immunocompetent, nude, and
+isotype or anti-PD-1 treatment - and separately tabulate eight groups by background and
+sample count. Nothing joins the two. The stated cohort sizes do not reconcile with the 141
+tumour samples present, and there are four groups per background against three described
+arms.
+
+**A correct answer aggregates on the background label**, which every count column carries
+directly (`NTC` or `STK11`), and reports the genotype comparison from that. No conclusion in
+this assessment requires the arm identities:
+
+- Genotype selectivity comes from the background label.
+- Catalytic dependence comes from the construct-labelled rescue panels.
+- Checkpoint-refractoriness comes from the supplementary growth panel, whose arms are
+  labelled explicitly as nude, immunocompetent, and immunocompetent with anti-PD-1.
+- T-cell dependence comes from the adoptive-transfer panel, labelled by effector dose, and
+  from the co-culture panel, labelled by effector-to-target ratio.
+
+Each of those has a labelled route. The screen's arm structure would give a second,
+independent route to conclusions that already have one.
+
+**Inferring the arms is acceptable where it is flagged as inference.** The interferon-axis
+genes are under visibly weaker selection in two of the eight groups, which is what a
+T-cell-deficient cohort should look like, and those two groups also sit in a distinct
+animal-identifier block. An answer that notes this, labels it as its own inference rather
+than the client's record, and does not rest a conclusion on it, is doing the right thing. So
+is an answer that declines to infer at all.
+
+**What is not correct** is presenting an inferred mapping as though the files supplied it, or
+resting the anti-PD-1 interaction claim on the screen when the screen cannot address it as
+delivered. An answer that produces two readings under swapped labels and picks one with
+reasons is acceptable; the ambiguity is real and naming it is better than hiding it.
+
+The gap originates upstream, not in the preparation of this package: the deposit annotates
+all sequencing runs identically, names no groups, and never mentions the nude cohort.
 
 **Named domain knowledge used**: MGAT1's enzymatic reaction and glycan compositional nomenclature; lectin binding specificities; the mouse and human genetic safety literature; identity of core-essential genes. Everything else derives from the mounted files.
