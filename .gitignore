@@ -1,0 +1,5 @@
+# Solver run exports (Taiga). Large JSON transcripts; re-fetch from ayyang04-ay/FA-data.
+runs/
+
+__pycache__/
+*.pyc
