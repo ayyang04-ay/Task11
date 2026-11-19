@@ -8,8 +8,8 @@ RLS URL: https://studio.mercor.com/annotator/tasks/task_e55870a045744a9e932736ae
 
 | File | What it is |
 |---|---|
-| `prompt.txt` | The prompt, flat text, paste as-is |
-| `grader.txt` | Grading guidelines, A/B/C, flat text, paste as-is |
+| `prompt.txt` | The prompt as actually run, verbatim including typos |
+| `grader.txt` | Internal reference only. Studio offered no grader field for this task, so this was not submitted. Retained because it makes the predicted modes visible in transcripts and is the fastest lookup during the FA |
 | `golden_response.md` | Goes to Reviewer Facing Golden Response |
 | `failure_modes.md` | Pre-registered modes plus pre-pilot validation evidence |
 | `../room/` | The data room — mount all of it |

@@ -1,11 +1,11 @@
-A client has a small-molecule MGAT1 programme in lead optimisation against checkpoint-inhibitor-resistant, STK11-mutant NSCLC, and has asked us for an independent read on their package before they commit to IND-enabling work. MGAT1 has no approved or clinical-stage inhibitor, which is both why the client thinks there is something here and why they want an outside view.
+A client has a small-molecule MGAT1 program against checkpoint-inhibitor-resistant, STK11-mutant NSCLC. I need an independent verification and analysis of the data so I can make my recommendation.
 
-Everything they hold is dumped here. Treat these files as ground truth: they are the client's own records, and nothing outside them has been validated against their system. All verdicts and calls must be supported by their data. Perform your analysis as of Nov 1, 2026.
+All the data is included, and updated as today (Nov1 2026).
 
-What I need back: your recommendation on the first line, in your own words: what I tell them to do with this asset. Then the case behind it, built out as strongly as their data allows with the cited data. Then the next steps: what the next studies have to establish, and what each one has to be compared against. If your read is that it should not advance, tell me instead what would have to be shown to bring it back, and what work would show it.
+Treat these files as ground truth. The client produced all the data, so it's the only data they trust. All recommendations and claims must be supported by their data.
 
-Every claim has to be verifiable against their files and data. Cite each number to the file it sits in and say how you arrived at it: what you took from the record and what you did to it. I will be asked where each number came from.
+Give me your recommendation on what they should do with this asset and the then build out the case behind your call as strongly as the data allows. A strong recommendation should also detail next steps: what the next studies need to establish and relevant comparisons the data needs to include. If your call is not advance, then what data would need to be demonstrated to bring it back.
 
-Tell me what you looked at and set aside, and why.
+When relevant, your recommendation should cite the original data and the analysis that supports your conclusions. I will be asked where each number came from, so I need to be ready. Tell me anything you set aside or discounted, and why.
 
-Keep this at the level of design, specification and interpretation of the package. Bench and assay protocol detail is not needed.
+Let's keep this high level: focus on design, specification, and interpretation. We don't need protocols or assay methodology.
