@@ -1,10 +1,10 @@
 # MGAT1 programme assessment — pilot package
 
-Category: small-molecule selection and triage. Phase 1, lead optimisation and candidate
-selection. Decision shape: go/no-go on an asset.
+Category: program decisions (writer's classification).
+Phase 1, lead optimisation and candidate selection. Decision shape: go/no-go on an asset.
 
-RLS short ID: [ ]
-RLS URL ID:   [ ]
+RLS short ID: tam11b5f
+RLS URL: https://studio.mercor.com/annotator/tasks/task_e55870a045744a9e932736ae7ca1822f/?campaignId=camp_0589d1e96758477586df0e43dd8eeec1
 
 | File | What it is |
 |---|---|
