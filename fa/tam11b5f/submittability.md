@@ -11,7 +11,7 @@ Mode: **trajectory-only**. `grading_config.json` carries `grader_guidance: null`
 
 | Check | Result | Reason |
 |---|---|---|
-| QA fixability | Pass | No QA report supplied with the export; nothing to triage, so nothing can block |
+| QA fixability | Pass | Taiga export v1 triaged in `qa_triage.md`. 9 findings, none needing a prompt or room edit. The one error-level finding that was golden-fixable (screen arm key) was already closed by `450fab4`. The other error-level finding is grader-only and never blocks |
 | Golden derivability | Pass, with one edit | Every golden figure I recomputed reproduces from the room as the runs saw it. One exception is scheme-dependent, not wrong — see §4 |
 | At least one candidate | Pass | Modes 1 and 2 confirmed: present in 3 runs each, governing line located in prompt or room, load-bearing |
 
@@ -26,6 +26,7 @@ Room provenance: last room commit `2343381`, 2026-11-18 15:47Z; runs began 2026-
 | 3 | Readout disagreement read as assay defect | Synthesis | O2, O3 | Both set the glycoproteomics aside as a PD reference because its magnitude disagrees with the lectin result. O2: "only about a 40–45% fall ... This conflicts with the ~97% PHA-L loss, so it cannot yet serve as a quantitative PD reference". O3: "falls only from ≈9–10% to ≈5% ... This conflicts with the ≈96% PHA-L loss and fits TMT ratio compression or misassignment" | Surface lectin avidity and whole-lysate glycopeptide abundance measure different things in different compartments; they have no reason to agree, so disagreement is not evidence either is defective. Right conclusion, basis that does not produce it | O2 memo L137 and L261; O3 memo L137 | **Confirmed present; defensibility contested** — see §6 |
 | 4 | Safety treated only as a data gap | Reasoning | O1, O2, O3, O4, F1, F2, F3, F4 | Every run records safety as absent and schedules it as future work — O1 "Absent", O4 "Untested", F2 "**No data**", F3 "no data on T-cell function or tolerability" — and none names an on-target risk from MGAT1 biology. Across all eight deliverables: no mention of cardiac risk (one glancing hit in F2), autoimmunity, or germline loss | Golden §5 takes a position from target biology. But the prompt restricts claims to the client's data and the golden labels its own safety content "*Named domain knowledge, not from the package*" | O1 L47; O4 L38; F2 L53; F3 L37 | **Held — requirement basis contested** |
 | 5 | Product-side magnitude with no denominator | Synthesis | O1, O2, O3, O4, F1, F2, F3, F4 | All eight quote a product-side magnitude (complex or sialylated signal falling by a stated amount). None states how many complex or sialylated sites were actually quantified. F1 comes closest with "125 of 164 sites" | Golden: what rules the dataset out as a product-side reference is the size of that denominator. The prompt requires each number's basis, but does not ask for a denominator in terms | F1 L158; O3 L137; O4 glyco section; F3 L37 | **Held — requirement basis generic** |
+| 6 | Inferred screen arms presented as the client's record | Referential | O3, (F3) | O3 reports screen results in bare arm labels as though the records supplied them — "#1 of 795 ... in **B6-isotype** tumours", "not significant in **nude hosts**", an "STK11 × immune interaction" with FDRs — and makes the anti-PD-1 claim on that basis (L42, L45, L92). Its one disclosure (L136) immunises only the selectivity claim. F3 declares an inferred key then states the anti-PD-1 result without a robustness note | Prompt: files are "ground truth" and claims "must be supported by their data"; golden §"Expected treatment of the unmapped screen arms" states that presenting an inference as the client's record is not correct | O3 memo L42, L45, L92 against its disclosure at L136; F3 L34 against L84 | **Held — below the floor** unless F3 counts |
 
 ## 4. Golden edits required
 
@@ -61,3 +62,7 @@ Everything else I checked reproduces: 909 analysable sites and row P23193 all-ze
 - **Coverage screen is clean.** Every run referenced all sixteen room files. No non-use candidate.
 - **Thinking is summarised**, not raw (`thinking_summary_status: ready`). 116–156 blocks per run, 70–100% carrying text, median ~550 characters. Claims about what a run weighed internally are not supportable, so the raised-then-abandoned shape is ruled out. Mode 2 does not depend on it: the records text reached every run as raw tool output.
 - `scipy` is absent from this container; any test is hand-implemented.
+
+## 8. QA
+
+Taiga export v1 triaged in `qa_triage.md`. No blocker. One error-level finding was golden-fixable and is already closed; one is grader-only and cannot be fixed from here; the rest are tooling, duplicates or self-dismissed. The ClaudeScope job reports six clusters but only two are in the export — the other four are unreadable from what was supplied.
