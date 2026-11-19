@@ -1,0 +1,37 @@
+You are grading an independent read on a client's small-molecule MGAT1 programme in STK11-mutant NSCLC: whether to advance toward IND-enabling work, and the study package required to get there. The responder had a working directory containing in vivo and in vitro screen counts, knockout glycoproteomics, compound registry and biophysical tables, assay and phenotype figure records, five crystal structures, and a methods document. A result counts only where the value is right and the basis given produces it.
+
+A) MUST BE PRESENT AND CORRECT
+The following are the key requirements of a correct answer. Use your judgment to identify any additional required content not listed here.
+- States that no compound in the package has been tested in any cell, and treats that as the gating gap.
+- Establishes that the phenotype depends on MGAT1 catalytic activity, citing the wild-type versus catalytically-dead cDNA rescue.
+- Reports the genotype-selectivity of MGAT1 depletion using a comparison corrected for differential guide representation between the two backgrounds, and indicates whether that conclusion is stable to the choice of correction.
+- Characterises the knockout glycoproteomics quantitatively and establishes how many complex or sialylated sites were actually quantified before drawing any product-side conclusion.
+- Concludes that neither acquired compound is validated chemical matter, with a basis that produces that conclusion.
+- Proposes a pharmacodynamic assay that does not rest on the existing glycoproteomics as a product-side reference.
+- Proposes selectivity work scoped to the relevant paralogs, and takes a safety position rather than only noting the absence of safety data.
+- Establishes cross-species potency before proposing any mouse in vivo efficacy study, or states why that study is uninterpretable without it.
+- Gives, for every number, the file it came from and how it was reduced.
+
+B) PENALIZE FOR
+The following are common errors observed on this task. This list is not exhaustive - apply your judgment to any other issues you identify.
+- Normalising the quantitative channels to equal total or median intensity, or reporting a depletion of complex glycans that follows from having done so.
+- Reporting high-mannose species as decreasing in the knockout.
+- Drawing a conclusion about product-side depletion without establishing how many such sites were quantified.
+- Treating a surface lectin signal ratio and a whole-lysate glycopeptide intensity ratio as directly comparable magnitudes.
+- Reading the two-fold dissociation-constant shifts in the competition experiments as cooperativity, where the records state each experiment used a freshly prepared surface at a different immobilisation level.
+- Comparing guide depletion across the two backgrounds without correcting for differential representation, or asserting the selectivity magnitude without testing whether it survives a different correction.
+- Quoting a fitted potency for a compound whose dose-response does not approach full inhibition.
+- Proposing a mouse in vivo efficacy study without establishing that the compounds inhibit mouse MGAT1.
+- Treating the absence of toxicology data as grounds for making no safety assessment.
+- Reporting a value whose stated derivation does not reproduce it.
+
+C) NEUTRAL
+The following are examples of acceptable variations that should not affect the score. Other variations may also be neutral - use your judgment.
+- Any defensible glycan classification scheme, and percentages within a few points of those in the reference.
+- Control-guide normalisation or any other method that demonstrably corrects for differential representation.
+- Excluding the acquired compounds on orthogonal binding evidence, on incomplete inhibition, or on both.
+- Nominating either the most potent analogue or the one carrying the mechanistic package as development candidate, where justified.
+- Any of several study designs, sequencings or timelines for the proposed work.
+- Whether the safety risk is called a blocker or a characterisable risk.
+- Whether the asset is positioned on STK11-mutant disease or repositioned more broadly, where the positioning follows from the selectivity analysis presented.
+- Order, layout, length, headings and units.
