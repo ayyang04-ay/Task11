@@ -4,7 +4,7 @@ For typing into Studio. **Bare facts arranged under the official fields, not sen
 
 ## Before you start: three constraints
 
-**1. The official cap is five modes. Six cleared.** Ranked below; the top five are marked SHIP and the sixth DROP. Your pick, but something has to go.
+**1. Five modes, which is the official cap.** A sixth cleared the bars (`unmeasured-product-side`: all eight runs quoted a product-side magnitude without the denominator it rests on) and was dropped on your call. Its basis was the weakest of the six — the prompt requires each number's basis but never asks for a denominator in terms. If a reviewer asks what else was found, that is the answer.
 
 **2. No mode changed the verdict, and the write-up must not claim one did.** All eight runs reached the same call — do not advance now, hold behind gates, fund a short gated package, keep the target — and the golden reaches it too. The absence of any cellular compound data over-determines the call, which was pre-registered as a known design weakness. So for each mode the honest field is **what it did affect**: the study package, the mechanism case, the positioning, the provenance, or a decision input. Written as "this is why the run got the call wrong" it is false and a reviewer reading the transcripts will catch it.
 
@@ -16,12 +16,12 @@ This file is ordered for the write-up, so the numbers differ from `error_modes.m
 
 | Here | Short name | `error_modes.md` |
 |---|---|---|
-| 1 | `no-cross-species` | 1 |
-| 2 | `arm-labels-unsourced` | 3 |
+| 1 | `arm-labels-unsourced` | 3 |
+| 2 | `no-cross-species` | 1 |
 | 3 | `spr-surface-unapplied` | 2 |
 | 4 | `no-safety-position` | 5 |
 | 5 | `lectin-ms-commensurable` | 4 |
-| 6 | `unmeasured-product-side` | 6 |
+| dropped | `unmeasured-product-side` | 6 |
 
 ## Run labels
 
@@ -29,27 +29,7 @@ Write the model for every run. Opus 5.5: O1 `bd63c97e`, O2 `2caa3b04`, O3 `bc8b9
 
 ---
 
-# 1. `no-cross-species` — SHIP
-
-**One breath:** the drug was only ever tested on the human enzyme, every animal model is a mouse, and three runs designed the expensive mouse efficacy study without asking whether the drug works on mouse enzyme at all.
-
-| Field | Facts |
-|---|---|
-| **Classification** | High-level: specification failure in the study package. Specific: a mouse in vivo efficacy study specified as a funded gate without establishing mouse MGAT1 potency, where every compound measurement in the room is against human enzyme |
-| **Affected** | The next-steps section. Invalidates a named comparator: the mouse efficacy study as specified cannot distinguish a drug that failed from one that never engaged the target. Not the go/no-go |
-| **Runs** | Opus 5.5 O1, O2, O3 |
-| **Wrong — O1** | Memo L225, specifies "a 2×2 design in vivo (MGAT1 inhibition × anti-PD-1), run in an STK11-null, lung-relevant syngeneic model and its isogenic STK11-intact twin". No mouse potency requirement anywhere in the deliverable |
-| **Wrong — O2** | Memo L197, efficacy design "STK11-deficient immunocompetent tumours (ideally a lung model alongside sgSTK11 MC38), in a 2×2 factorial". Bring-back criterion 4 at L225 asks for in vivo translation against the genetic benchmark. No mouse potency requirement anywhere |
-| **Wrong — O3** | Memo L110, Gate 4 go criterion "significant TGI vs vehicle in STK11-null, approaching the KO benchmark (≈50% in MC38 sgSTK11)". No mouse potency requirement anywhere |
-| **Also usable** | All three are species-aware elsewhere: O1 and O3 both flag that the hepatocyte clearance species is not stated. The check was applied to clearance, not to the compound's own pharmacology |
-| **Room facts** | `experimental_records.pdf` §6.1: construct is UniProt P26572, residues T30–N445. §6.4: SPR construct A104–N445, same protein. §2: MC38 implanted into C57BL/6 and nude mice. Records reached all three as raw tool output |
-| **Transcripts** | No species-potency reasoning anywhere in O1, O2 or O3. Probed on mouse/murine + potency/IC50/orthologue/conservation, and on cross-species |
-| **Should have** | Required mouse MGAT1 potency and pocket conservation before any mouse efficacy study, compared against the human potency. Golden study 3: "Required before any mouse efficacy study: every compound measurement is against human enzyme and every in vivo model is mouse" |
-| **Exemplar** | Opus 5.5 O4: names the gap at L80 ("Every biochemical, biophysical and structural datum is on human MGAT1, while all in vivo models are murine. There is no mouse Mgat1 potency"), lists "Mouse Mgat1 potency (needed before any MC38 work)" at L222, makes it bring-back criterion 3 at L275, and plans the contingency at L247 ("If mouse potency is >3× weaker than human, use a surrogate tool or a humanised-target model"). Fable 5.2 F2 (Gate 3, L138, "activity on mouse MGAT1"), F3 (L109), F4 (L153) each also require it |
-
----
-
-# 2. `arm-labels-unsourced` — SHIP
+# 1. `arm-labels-unsourced` — SHIP — lead with this one
 
 **One breath:** the client's screen has eight tumour groups and no file says which is the untreated arm, the antibody-control arm or the treated arm; three runs worked out a likely mapping, which is fine, then reported results as "in the nude mice" and told the client those numbers came from the count file, which holds no arm identities.
 
@@ -66,6 +46,26 @@ Write the model for every run. Opus 5.5: O1 `bd63c97e`, O2 `2caa3b04`, O3 `bc8b9
 | **Transcripts — the framing constraint** | All three recorded the gap **before** inferring: F1 element 105 ("The records never define group identities, so I'll flag that as a documentation gap. I'll infer the arms from the data instead"), O3 elements 153 and 399, F3 elements 102 and 369. F1 also revised its first mapping after finding it contradicted by the Cd274 data. **So this is an attribution and reporting failure, not a failure to recognise.** Do not write it as the latter. These blocks are summarised thinking — corroborating only; the mode rests on the deliverables and the records text, both raw |
 | **Should have** | Reported the screen on the background label every count column already carries (`NTC` or `STK11`) and taken the genotype comparison from that. Golden: "A correct answer aggregates on the background label... No conclusion in this assessment requires the arm identities." Where arms are inferred, carry the hedge on the number and in the provenance column rather than declaring it once elsewhere. Golden: "Inferring the arms is acceptable where it is flagged as inference... What is not correct is presenting an inferred mapping as though the files supplied it" |
 | **Exemplar** | Opus 5.5 O2 — the hedge travels with the number: ledger row titled "Mgat1 gene score by background x inferred arm", every value labelled "nude-like", "IgG-like", "aPD-1-like", plus a separate row E14 "Arm inference from internal controls (client did not supply arm key)". O1 writes "immunocompetent-like" throughout. O4 keeps the inference in an appendix, states its figure conditionally at L100 ("Under that mapping"), and tells the client at L157 that "The screen's group→condition map (nude / IgG / anti-PD-1) is not documented, so T-cell and anti-PD-1 dependence cannot be tested directly" |
+
+---
+
+# 2. `no-cross-species` — SHIP
+
+**One breath:** the drug was only ever tested on the human enzyme, every animal model is a mouse, and three runs designed the expensive mouse efficacy study without asking whether the drug works on mouse enzyme at all.
+
+| Field | Facts |
+|---|---|
+| **Classification** | High-level: specification failure in the study package. Specific: a mouse in vivo efficacy study specified as a funded gate without establishing mouse MGAT1 potency, where every compound measurement in the room is against human enzyme |
+| **Affected** | The next-steps section. Invalidates a named comparator: the mouse efficacy study as specified cannot distinguish a drug that failed from one that never engaged the target. Not the go/no-go |
+| **Runs** | Opus 5.5 O1, O2, O3 |
+| **Wrong — O1** | Memo L225, specifies "a 2×2 design in vivo (MGAT1 inhibition × anti-PD-1), run in an STK11-null, lung-relevant syngeneic model and its isogenic STK11-intact twin". No mouse potency requirement anywhere in the deliverable |
+| **Wrong — O2** | Memo L197, efficacy design "STK11-deficient immunocompetent tumours (ideally a lung model alongside sgSTK11 MC38), in a 2×2 factorial". Bring-back criterion 4 at L225 asks for in vivo translation against the genetic benchmark. No mouse potency requirement anywhere |
+| **Wrong — O3** | Memo L110, Gate 4 go criterion "significant TGI vs vehicle in STK11-null, approaching the KO benchmark (≈50% in MC38 sgSTK11)". No mouse potency requirement anywhere |
+| **Also usable** | All three are species-aware elsewhere: O1 and O3 both flag that the hepatocyte clearance species is not stated. The check was applied to clearance, not to the compound's own pharmacology |
+| **Room facts** | `experimental_records.pdf` §6.1: construct is UniProt P26572, residues T30–N445. §6.4: SPR construct A104–N445, same protein. §2: MC38 implanted into C57BL/6 and nude mice. Records reached all three as raw tool output |
+| **Transcripts** | No species-potency reasoning anywhere in O1, O2 or O3. Probed on mouse/murine + potency/IC50/orthologue/conservation, and on cross-species |
+| **Should have** | Required mouse MGAT1 potency and pocket conservation before any mouse efficacy study, compared against the human potency. Golden study 3: "Required before any mouse efficacy study: every compound measurement is against human enzyme and every in vivo model is mouse" |
+| **Exemplar** | Opus 5.5 O4: names the gap at L80 ("Every biochemical, biophysical and structural datum is on human MGAT1, while all in vivo models are murine. There is no mouse Mgat1 potency"), lists "Mouse Mgat1 potency (needed before any MC38 work)" at L222, makes it bring-back criterion 3 at L275, and plans the contingency at L247 ("If mouse potency is >3× weaker than human, use a surrogate tool or a humanised-target model"). Fable 5.2 F2 (Gate 3, L138, "activity on mouse MGAT1"), F3 (L109), F4 (L153) each also require it |
 
 ---
 
@@ -106,7 +106,7 @@ Write the model for every run. Opus 5.5: O1 `bd63c97e`, O2 `2caa3b04`, O3 `bc8b9
 
 ---
 
-# 5. `lectin-ms-commensurable` — SHIP (fifth slot, or swap for 6)
+# 5. `lectin-ms-commensurable` — SHIP (narrowest; Opus only)
 
 **One breath:** two ways of measuring the same biology disagree — one stains the cell surface and shows a 96% drop, the other weighs molecules from the whole crushed-up cell and shows 40% — and two runs concluded the second must be faulty, when the two methods were never measuring comparable things.
 
@@ -123,23 +123,6 @@ Write the model for every run. Opus 5.5: O1 `bd63c97e`, O2 `2caa3b04`, O3 `bc8b9
 
 ---
 
-# 6. `unmeasured-product-side` — DROP (sixth of six; swap in over 5 only if you want panel-wide reach over a cleaner basis)
-
-**One breath:** all eight runs reported how far the relevant sugar structures fell in the knockout cells, and none said how many of those structures were actually measured — the answer is a few dozen out of hundreds, which is the real reason that dataset cannot be the programme's yardstick.
-
-| Field | Facts |
-|---|---|
-| **Classification** | High-level: synthesis failure, a conclusion drawn past what the sample supports. Specific: a product-side magnitude quoted without establishing how many complex or sialylated sites the dataset quantified |
-| **Affected** | An unsupported magnitude reaches the client and the correct reason for setting the dataset aside goes unstated. Benign for the go/no-go |
-| **Runs** | All eight |
-| **Wrong** | O3 L137 "falls only from ≈9–10% to ≈5%". O2 L137 "only about a 40–45% fall". O4 glycoproteomics section, MGAT1-dependent share 16.5%→9.6% (A375) and 19.1%→9.4% (NCI-H1703). F3 L37 "sialylated complex down on 42 % / 50 %" against "910 sites on 524 proteins quantified" — the all-sites denominator, not the complex-sites one |
-| **Closest** | Fable 5.2 F1 L158 gives a real denominator — "complex share fell at 125 of 164 sites in each line (sign test p = 1e-11); median site keeps 66% (A375) / 74% (H1703)" — without saying how many carry a single unambiguous complex-sialylated composition. Partial match, not an exemplar |
-| **Should have** | Established the denominator first and made the small denominator the reason for ruling the dataset out. Recomputed from `glycoproteomics_site_quant.xlsx` sheet `Site_quant`: 910 rows, row P23193 with all eight A375 channels at exactly zero, 909 analysable; of those, 422 carry exactly one composition; among those, high-mannose sites outnumber complex-sialylated by better than ten to one. **Write the ratio, not an exact count** — the split is classification-scheme dependent (the golden's scheme gives 317 against 16, mine gives 306 against 26) and the grading guidance treats any defensible scheme as neutral, so an exact figure invites a challenge the ratio does not |
-| **Exemplar** | **None clean.** F1 partial, as above |
-| **Why it is sixth** | The prompt requires each number's basis but does not ask for a denominator in terms, so the requirement is closer to an expert norm than a stated line. Mode 2 breaches the same prompt sentence directly by naming a file that cannot supply the number |
-
----
-
 ## Did-not-fire, if you are asked
 
 | Pre-registered mode | What the panel did |
@@ -150,4 +133,4 @@ Write the model for every run. Opus 5.5: O1 `bd63c97e`, O2 `2caa3b04`, O3 `bc8b9
 
 ## Poor exemplars — do not cite as instances
 
-Fable 5.2 F4 handles Modes 1, 2, 3 and 5 correctly and is the Mode 3 exemplar. Opus 5.5 O4 is the exemplar for Modes 1 and 2. Opus 5.5 O2 is the Mode 2 exemplar while itself carrying Modes 1, 3, 4, 5 and 6 — fine, but keep the citation straight.
+Referenced by short name, since the numbering moved. Fable 5.2 **F4** handles `arm-labels-unsourced`, `no-cross-species`, `spr-surface-unapplied` and `lectin-ms-commensurable` correctly, and is the `spr-surface-unapplied` exemplar — it carries only `no-safety-position`. Opus 5.5 **O4** is the exemplar for both `no-cross-species` and `arm-labels-unsourced`, and carries only `no-safety-position`. Opus 5.5 **O2** is the `arm-labels-unsourced` exemplar while itself carrying the other four — fine to cite both ways, but keep it straight.
