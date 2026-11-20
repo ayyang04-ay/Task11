@@ -222,19 +222,60 @@ O2 s2, F2 s2). The golden has neither.
 
 ## Step 3 — Patterns
 
-### All runs differ from the golden
+Candidates only. Which of these are failure modes, and how each is named, is the writer's call.
+
+### All eight runs differ from the golden
 
 | Decision point | What every run does | What the golden does |
 |---|---|---|
 | 1. The recommendation | Opens with "do not advance" or "hold" | Opens with "advance, but not into IND-enabling work" |
 | 2. Unmapped screen arms | Infers arm identities and rests a mechanism conclusion on them | Aggregates on the background label; no conclusion rests on inferred arms |
+| 2. Safety | Reports safety as an absence of client data; defers it to a tolerability readout | Takes a position from named domain knowledge: characterisable risk, cardiac pharmacology first |
+| 3/4. Study 7 | No on-target cardiac study | Cardiac safety pharmacology, compared against the known on-target phenotype |
+| 2. Normalisation evidence | None of the golden's quantitative foreclosure numbers appears (0.893 bulk centre, 245/658 split, 27.0%, 317 vs 16, 6 down) | Carries all of them |
+| 8. Length | 2.3x to 4.9x the golden | 1,770 words |
+
+The verdict row and the safety row are the two where the substance, not only the route, parts
+company. On the verdict the substance underneath is the same in all 8 (see Decision point 1). On
+safety there is no overlap at all.
+
+### Near-unanimous, 7 of 8
+
+| Pattern | Runs | Absent in |
+|---|---|---|
+| A section addressed to the client that the prompt did not request: questions to put, or data-integrity issues to resolve | O1, O2, O3, F1, F2, F3, F4 | O4 (carries Appendix C instead) |
+| Glycoproteomic magnitudes set aside rather than used | O1, O2, O3, O4, F1, F2, F3 | F4 (centres on Man7-9 instead) |
+| The ~1.6x channel-total imbalance stated | all but O2 | O2 |
+
+### Splits that run on model lines
+
+| Pattern | Opus | Fable |
+|---|---|---|
+| Mouse-enzyme potency named as a required study | 1 of 4 (O4) | **4 of 4** |
+| Reads the PHA-L / mass-spectrometry magnitude disagreement as bearing on whether the mass spectrometry is sound | **2 of 4** (O2, O3) | 0 of 4 |
+| Set-aside section over 2.7 kB | 1 of 4 (O3) | 2 of 4 (F3, F4) |
+
+The first is the larger of the two. Every Fable run reaches the cross-species precondition and
+three state the interpretive consequence for a mouse study; three of four Opus runs do not raise it.
 
 ### Unique in model
 
 | Run | Approach no other run of its model shares | Also differs from golden |
 |---|---|---|
 | Opus A3 (`bc8b9e20`) | Computes the STK11-minus-NTC differential per inferred arm rather than absolute depletion, and reports the dependency as largely immune-dependent | Yes |
+| Fable A4 (`69bb2ad2`) | Centres the glycoproteomics channels on Man7-9 glycopeptides upstream of MGAT1, as an internal reference, rather than declining the magnitudes | Yes, in route; the conclusion agrees |
 
-### Cross-model pairs, same verdict different route, deliverable vs transcript
+### Cross-model pairs, same conclusion by a route the golden does not take
+
+| Pair | Shared route | Golden's route |
+|---|---|---|
+| **O1 + F1** | Substitute within-channel composition shares for the absolute ratios, both citing the ~1.6x channel imbalance as the reason | Use the absolute ratios; the unchanged bulk at 0.893 is what rules out a loading artefact |
+| **O2 + F3** | Hold the glycoproteomic magnitudes as "directional only" | As above |
+
+Both pairs reach the golden's conclusion, that the class-specific shift is not a loading artefact,
+without the golden's quantitative basis for it. O1 and F1 are the tighter pair: the substitution is
+the same and the stated reason is the same.
+
+### Deliverable against transcript
 
 Not yet surveyed. Transcripts unread.
