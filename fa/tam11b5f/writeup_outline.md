@@ -4,9 +4,9 @@ For typing into Studio. **Bare facts arranged under the official fields, not sen
 
 ## Before you start: three constraints
 
-**1. Five modes, which is the official cap.** A sixth cleared the bars (`unmeasured-product-side`: all eight runs quoted a product-side magnitude without the denominator it rests on) and was dropped on your call. Its basis was the weakest of the six — the prompt requires each number's basis but never asks for a denominator in terms. If a reviewer asks what else was found, that is the answer.
+**1. Four modes.** Two more cleared the mechanical bars and were dropped on your call, both for a weak requirement basis: `unmeasured-product-side` (all eight quoted a product-side magnitude without the denominator it rests on — the prompt wants each number's basis but never asks for a denominator) and `no-safety-position` (all eight treated the absence of toxicology as grounds for taking no safety position — the requirement is in the golden, not the prompt, and the prompt restricts claims to the client's data). If a reviewer asks what else was found, those are the answers.
 
-**2. No mode changed the verdict, and the write-up must not claim one did.** All eight runs reached the same call — do not advance now, hold behind gates, fund a short gated package, keep the target — and the golden reaches it too. The absence of any cellular compound data over-determines the call, which was pre-registered as a known design weakness. So for each mode the honest field is **what it did affect**: the study package, the mechanism case, the positioning, the provenance, or a decision input. Written as "this is why the run got the call wrong" it is false and a reviewer reading the transcripts will catch it.
+**2. No mode changed the verdict, and the write-up must not claim one did.** The ranking below says what each one did bend instead. All eight runs reached the same call — do not advance now, hold behind gates, fund a short gated package, keep the target — and the golden reaches it too. The absence of any cellular compound data over-determines the call, which was pre-registered as a known design weakness. So for each mode the honest field is **what it did affect**: the study package, the mechanism case, the positioning, the provenance, or a decision input. Written as "this is why the run got the call wrong" it is false and a reviewer reading the transcripts will catch it.
 
 **3. Section discipline.** "What did the model do wrong" carries only what went wrong. The exemplar run's correct behaviour goes in "what should the model have done", never in the wrong-doing section — praise inside a failure item gets the item rejected. No scores anywhere. No k-of-n ratios; name the runs.
 
@@ -19,9 +19,24 @@ This file is ordered for the write-up, so the numbers differ from `error_modes.m
 | 1 | `arm-labels-unsourced` | 3 |
 | 2 | `no-cross-species` | 1 |
 | 3 | `spr-surface-unapplied` | 2 |
-| 4 | `no-safety-position` | 5 |
-| 5 | `lectin-ms-commensurable` | 4 |
+| 4 | `lectin-ms-commensurable` | 4 |
+| dropped | `no-safety-position` | 5 |
 | dropped | `unmeasured-product-side` | 6 |
+
+## How each mode bears on the verdict
+
+None flipped the call. All eight runs reached "do not advance now, hold behind gates, fund a short cellular package, keep the target", and so does the golden. The reason is structural: no compound in the package has ever been applied to a cell, and that single gap forces "not yet" on its own. It was pre-registered as a known design weakness — "the verdict is over-determined ... every route reaches 'not yet, fund the bridge'".
+
+So state each mode's impact at the level it actually operates. Ranked by how close it gets to the recommendation:
+
+| Rank | Mode | What it bends | How close to the call |
+|---|---|---|---|
+| 1 | `no-cross-species` | What the client spends money on. O1, O2 and O3 each direct the client to fund a mouse efficacy study that cannot be read when it reports, because a flat tumour curve cannot be split into "drug failed" and "drug never engaged the mouse enzyme" | The call is right; the part the client executes is defective. The most expensive of the four in practice, and invisible in the verdict |
+| 2 | `arm-labels-unsourced` | Positioning and provenance — and in one run, a conclusion | For O1, O2, F1 and F2 the conclusions survive, because the three candidate immunocompetent arms are statistically indistinguishable, so the failure is warrant rather than result. **O3 is the exception:** "smaller and not significant in nude hosts (Δ −1.05, FDR 0.14), so it is largely immune-dependent" (L45) is a positioning conclusion resting on an arm assignment it never tested — its only sensitivity work is "unchanged by every QC-exclusion scenario I tested" (L44), which is sample QC, not the mapping. That is the one place in the panel where an inferred label carries a conclusion untested, and it is worth citing as such |
+| 3 | `spr-surface-unapplied` | Case strength | O3 makes the mechanism look better understood than it is, and still writes that no mechanism-of-inhibition study was done and still keeps a mechanism gate. So the gate specification survives the error. A weaker-warrant finding with nothing downstream |
+| 4 | `lectin-ms-commensurable` | Nothing downstream | Both runs reach the correct conclusion and both propose a replacement readout. The actionable content is right; only the justification is wrong. Benign |
+
+The client's standing question is whether a run hit a domain-knowledge trap and made the wrong call. For this task the answer is no, and the FA should say so rather than imply otherwise. Each of these is a flawed route to a defensible destination.
 
 ## Run labels
 
@@ -49,6 +64,8 @@ Write the model for every run. Opus 5.5: O1 `bd63c97e`, O2 `2caa3b04`, O3 `bc8b9
 
 ---
 
+---
+
 # 2. `no-cross-species` — SHIP
 
 **One breath:** the drug was only ever tested on the human enzyme, every animal model is a mouse, and three runs designed the expensive mouse efficacy study without asking whether the drug works on mouse enzyme at all.
@@ -66,6 +83,8 @@ Write the model for every run. Opus 5.5: O1 `bd63c97e`, O2 `2caa3b04`, O3 `bc8b9
 | **Transcripts** | No species-potency reasoning anywhere in O1, O2 or O3. Probed on mouse/murine + potency/IC50/orthologue/conservation, and on cross-species |
 | **Should have** | Required mouse MGAT1 potency and pocket conservation before any mouse efficacy study, compared against the human potency. Golden study 3: "Required before any mouse efficacy study: every compound measurement is against human enzyme and every in vivo model is mouse" |
 | **Exemplar** | Opus 5.5 O4: names the gap at L80 ("Every biochemical, biophysical and structural datum is on human MGAT1, while all in vivo models are murine. There is no mouse Mgat1 potency"), lists "Mouse Mgat1 potency (needed before any MC38 work)" at L222, makes it bring-back criterion 3 at L275, and plans the contingency at L247 ("If mouse potency is >3× weaker than human, use a surrogate tool or a humanised-target model"). Fable 5.2 F2 (Gate 3, L138, "activity on mouse MGAT1"), F3 (L109), F4 (L153) each also require it |
+
+---
 
 ---
 
@@ -88,25 +107,9 @@ Write the model for every run. Opus 5.5: O1 `bd63c97e`, O2 `2caa3b04`, O3 `bc8b9
 
 ---
 
-# 4. `no-safety-position` — SHIP (widest reach, weakest grounds)
-
-**One breath:** every run noted there is no toxicology in the package and scheduled it as future work; none named a specific risk, though blocking this enzyme in the heart causes heart failure in mice and the same change to immune cells drives autoimmune disease — which is awkward, because revving up immune cells is the whole point of the drug.
-
-| Field | Facts |
-|---|---|
-| **Classification** | High-level: reasoning failure, a gap misclassified as unknowable. Specific: the absence of toxicology data treated as grounds for taking no safety position, where on-target cardiac and autoimmune risk are nameable from target biology |
-| **Affected** | Omits a decision input the committee needs. An autoimmune liability that cannot be separated from the intended pharmacology bears on whether the programme is fundable at all. Of the six modes this is the one with the most direct committee consequence, and still not the go/no-go |
-| **Runs** | Opus 5.5 O1, O2, O3, O4; Fable 5.2 F1, F2, F3, F4. Every run |
-| **Wrong — cite two or three** | O1 scorecard L47 "Tolerability of systemic MGAT1 inhibition \| None \| **Absent**". O4 scorecard L38 "Systemic inhibition is tolerated and spares T-cell function \| **Untested**". F2 L53 "Selectivity, exposure, tolerability \| **No data** beyond solubility and hepatocyte clearance". F3 L37 "There are no data on T-cell function or tolerability under MGAT1 loss or inhibition" |
-| **Sharper form** | Several runs identify the right shape and stop: O3 L97 "A systemic drug will also reach host cells, including the T cells it is meant to help, and no experiment tests MGAT1 loss or inhibition in T cells"; F1 L39 "A drug would start on established tumours and reach T cells as well as tumour cells". Named the exposure problem, named no risk |
-| **Absence** | Confirmed across all eight deliverables on probes for safety, tox, tolerability, cardiac, heart, QT, ion-channel, autoimmune, immune-related, irAE, on-target risk, germline, embryonic, multiple sclerosis, therapeutic index. One glancing cardiac hit in F2; no autoimmunity or germline mention anywhere |
-| **Should have** | Taken a position from target biology. Golden §5: germline MGAT1 loss is embryonic lethal in mice while MGAT1-null cells are viable, so cell-autonomous essentiality is not the issue; adult cardiomyocyte-specific deletion gives dilated cardiomyopathy through ion-channel glycosylation; reduced N-glycan branching drives T-cell hyperactivity and autoimmunity, mechanistically the same biology as the intended effect and so not engineerable away; complex N-glycans are required to form bronchial epithelium, directly relevant to a lung indication. Position: a characterisable risk rather than a blocker, cardiac safety pharmacology first. Golden: "An answer that reports only that no toxicology data exist has not taken a position" |
-| **Exemplar** | **None.** No run on this panel takes a safety position. State that rather than promoting a partial match |
-| **Expect a challenge** | The requirement is in the golden, not in the prompt, and the prompt says the client's files are "the only data they trust" with claims "supported by their data" — while the golden labels its own safety section "Named domain knowledge, not from the package". Your counter, worth putting in the write-up pre-emptively: all eight runs imported outside knowledge elsewhere (MC38's tissue of origin, core-essential gene identity, aggregation motifs), so a blanket no-outside-knowledge defence does not hold |
-
 ---
 
-# 5. `lectin-ms-commensurable` — SHIP (narrowest; Opus only)
+# 4. `lectin-ms-commensurable` — SHIP (narrowest; Opus only)
 
 **One breath:** two ways of measuring the same biology disagree — one stains the cell surface and shows a 96% drop, the other weighs molecules from the whole crushed-up cell and shows 40% — and two runs concluded the second must be faulty, when the two methods were never measuring comparable things.
 
@@ -133,4 +136,6 @@ Write the model for every run. Opus 5.5: O1 `bd63c97e`, O2 `2caa3b04`, O3 `bc8b9
 
 ## Poor exemplars — do not cite as instances
 
-Referenced by short name, since the numbering moved. Fable 5.2 **F4** handles `arm-labels-unsourced`, `no-cross-species`, `spr-surface-unapplied` and `lectin-ms-commensurable` correctly, and is the `spr-surface-unapplied` exemplar — it carries only `no-safety-position`. Opus 5.5 **O4** is the exemplar for both `no-cross-species` and `arm-labels-unsourced`, and carries only `no-safety-position`. Opus 5.5 **O2** is the `arm-labels-unsourced` exemplar while itself carrying the other four — fine to cite both ways, but keep it straight.
+With `no-safety-position` dropped, two runs carry **no mode at all**: Opus 5.5 **O4**, which is also the exemplar for both `no-cross-species` and `arm-labels-unsourced`, and Fable 5.2 **F4**, which is the `spr-surface-unapplied` exemplar. Do not cite either as an instance of anything.
+
+Opus 5.5 **O3** carries all four. Opus 5.5 **O2** is the `arm-labels-unsourced` exemplar while itself carrying the other three — fine to cite both ways, but keep it straight. O1, F1, F2 and F3 each carry one.
